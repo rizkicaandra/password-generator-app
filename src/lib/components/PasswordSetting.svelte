@@ -105,7 +105,7 @@
 	class="max-w-container-mobile bg-grey-800 text-preset-4 md:max-w-container-tablet md:text-preset-3 flex w-full flex-col p-4 md:px-8 md:py-6"
 >
 	<div class="flex items-center justify-between pb-2 md:pb-4">
-		<span class="text-white">Characters Length</span>
+		<label for="password-length" class="text-white">Characters Length</label>
 		<span
 			class="text-preset-2 md:text-preset-1 text-right whitespace-pre text-green-200 transition duration-500 ease-in-out"
 			>{#if passwordLength < 10}
@@ -117,6 +117,7 @@
 	</div>
 
 	<input
+		id="password-length"
 		type="range"
 		bind:value={passwordLength}
 		min="0"
@@ -155,9 +156,11 @@
 	</div>
 
 	<button
+		type="button"
 		disabled={strong().score === 0 || passwordLength < 1}
 		onclick={() => (password = generateFunction())}
 		class="hover:bg-grey-850 md:disabled:hover:bg-grey-850 md:disabled:hover:border-grey-850 md:disabled:hover:fill-grey-200 md:disabled:hover:text-grey-200 flex cursor-pointer items-center justify-center gap-4 bg-green-200 px-26 py-4.5 text-center uppercase hover:border-2 hover:border-green-200 hover:fill-green-200 hover:py-4 hover:text-green-200 disabled:cursor-not-allowed md:mb-4.25 md:gap-6 md:py-4.5 {isDisabled ? "disabled:bg-grey-850 disabled:border-grey-850 disabled:fill-grey-200 disabled:text-grey-200" : ""}"
+		aria-label="Generate Password"
 		>generate
 		<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
 			><path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" /></svg

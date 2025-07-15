@@ -28,7 +28,7 @@
 </script>
 
 <main
-	class="font-family-regular flex h-screen flex-col items-center justify-center gap-4 bg-black md:gap-0"
+	class="font-family-regular flex h-screen flex-col items-center justify-center gap-4 bg-black md:gap-0 md:justify-start md:mt-33.5"
 >
 	<h1 class="text-preset-4 text-grey-600 md:text-preset-2 md:mb-8">Password Generator</h1>
 	<PasswordResult bind:password={password} />
