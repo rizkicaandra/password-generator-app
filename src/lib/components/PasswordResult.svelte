@@ -17,7 +17,7 @@
 	<span class="text-preset-2 md:text-preset-1 {password !== '' ? 'text-white' : 'text-grey-700'}"
 		>{password || 'P4$5W0rD!'}</span
 	>
-	<button onclick={copyToClipboard} class="cursor-pointer hover:opacity-80 flex gap-2 md:gap-4 disabled:cursor-not-allowed uppercase text-preset-4 md:text-preset-3 text-green-200 transition duration-500 ease-in-out" disabled={!password}>
+	<button type="button" onclick={copyToClipboard} class="cursor-pointer hover:opacity-80 flex gap-2 md:gap-4 disabled:cursor-not-allowed uppercase text-preset-4 md:text-preset-3 text-green-200 transition duration-500 ease-in-out" disabled={!password}>
 		{#if isCopyed}
 			copied
 		{/if}

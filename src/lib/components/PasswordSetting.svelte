@@ -126,7 +126,7 @@
 		style="background: linear-gradient(to right, #a4ffaf 0%, #a4ffaf {percent()}%, #18171f {percent()}%, #18171f 100%);"
 	/>
 
-	<div class="flex flex-col gap-4.25 py-8 text-white md:gap-4">
+	<div class="flex flex-col gap-4.25 py-8 text-white md:gap-4 md:mb-1">
 		{#each Object.entries(settings) as [key, setting]}
 			<InputCheckbox label={setting.label} bind:checked={setting.checked} />
 		{/each}
@@ -134,7 +134,7 @@
 
 	<div
 		class="bg-grey-850 mb-4 flex items-center justify-between px-4 py-3.5 {strong().label
-			? ' md:py-5'
+			? 'md:py-5'
 			: 'md:py-5.5'} md:mb-8 md:px-8"
 	>
 		<span class="text-grey-600 uppercase">strength</span>
