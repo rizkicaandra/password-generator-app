@@ -126,7 +126,7 @@
 		style="background: linear-gradient(to right, #a4ffaf 0%, #a4ffaf {percent()}%, #18171f {percent()}%, #18171f 100%);"
 	/>
 
-	<div class="flex flex-col gap-4.25 py-8 text-white md:gap-4 md:mb-1.5">
+	<div class="flex flex-col gap-4.25 py-8 text-white md:gap-4 md:mb-2">
 		{#each Object.entries(settings) as [key, setting]}
 			<InputCheckbox label={setting.label} bind:checked={setting.checked} />
 		{/each}
@@ -159,7 +159,7 @@
 		type="button"
 		disabled={strong().score === 0 || passwordLength < 1}
 		onclick={() => (password = generateFunction())}
-		class="hover:bg-grey-850 md:disabled:hover:bg-grey-850 md:disabled:hover:border-grey-850 md:disabled:hover:fill-grey-200 md:disabled:hover:text-grey-200 flex cursor-pointer items-center justify-center gap-4 bg-green-200 px-26 py-4.5 text-center uppercase hover:border-2 hover:border-green-200 hover:fill-green-200 hover:py-4 hover:text-green-200 disabled:cursor-not-allowed md:mb-4.25 md:gap-6 md:py-4.5 {isDisabled ? "disabled:bg-grey-850 disabled:border-grey-850 disabled:fill-grey-200 disabled:text-grey-200" : ""}"
+		class="hover:bg-grey-850 md:disabled:hover:bg-grey-850 md:disabled:hover:border-grey-850 md:disabled:hover:fill-grey-200 md:disabled:hover:text-grey-200 flex cursor-pointer items-center justify-center gap-4 bg-green-200 px-26 py-4.5 text-center uppercase hover:border-2 hover:border-green-200 hover:fill-green-200 hover:py-4 hover:text-green-200 disabled:cursor-not-allowed md:mb-3.5 md:gap-6 md:py-4.5 {isDisabled ? "disabled:bg-grey-850 disabled:border-grey-850 disabled:fill-grey-200 disabled:text-grey-200" : ""}"
 		aria-label="Generate Password"
 		>generate
 		<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
