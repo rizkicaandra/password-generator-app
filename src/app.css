@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+
+/* Regular Variable Font */
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900; /* Variable font supports a range */
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Italic Variable Font */
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: url('/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Bold (optional override for compatibility) */
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: url('/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Bold Italic (optional override for compatibility) */
+@font-face {
+	font-family: 'JetBrainsMono';
+	src: url('/fonts/JetBrainsMono-BoldItalic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+@theme {
+	/* font family */
+	--font-family-regular: 'JetBrainsMono', monospace;
+
+	/* spacing */
+	--spacing-26: 6.5rem;
+	--spacing-4.25: 1.063rem;
+	--spacing-4.5: 1.125rem;
+	--spacing-4.75: 1.188rem;
+	--spacing-5.5: 1.375rem;
+
+	/* color */
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-grey-200: #e6e5ea;
+	--color-grey-600: #817d92;
+	--color-grey-700: #54535b;
+	--color-grey-800: #24232c;
+	--color-grey-850: #18171f;
+	--color-grey-900: #14131b;
+	--color-grey-950: #08070b;
+	--color-green-200: #a4ffaf;
+	--color-yellow-300: #f8cd65;
+	--color-orange-400: #fb7c58;
+	--color-red-500: #f64a4a;
+
+	/* text */
+	--text-preset-1: 2rem;
+	--text-preset-1--line-height: 2.625rem;
+	--text-preset-1--letter-spacing: 0rem;
+	--text-preset-1--font-weight: 700;
+	--text-preset-2: 1.5rem;
+	--text-preset-2--line-height: 2rem;
+	--text-preset-2--letter-spacing: 0rem;
+	--text-preset-2--font-weight: 700;
+	--text-preset-3: 1.125rem;
+	--text-preset-3--line-height: 1.5rem;
+	--text-preset-3--letter-spacing: 0rem;
+	--text-preset-3--font-weight: 700;
+	--text-preset-4: 1rem;
+	--text-preset-4--line-height: 1.25rem;
+	--text-preset-4--letter-spacing: 0rem;
+	--text-preset-4--font-weight: 700;
+
+	/* max width */
+	--spacing-container-mobile: 21.438rem;
+	--spacing-container-tablet: 33.75rem;
+}
+
+.custom-input-range {
+	@apply bg-grey-850 my-2.5 h-2 cursor-pointer appearance-none;
+}
+
+.custom-input-range::-webkit-slider-thumb {
+	@apply bg-grey-200 h-7 w-7 appearance-none rounded-full;
+}
+
+.custom-input-range::-webkit-slider-thumb:active {
+	@apply border-2 border-green-200 bg-black;
+}
+
+.custom-input-range::-moz-range-thumb {
+	@apply bg-grey-200 h-7 w-7 rounded-full;
+}
+
+.custom-input-range::-moz-range-thumb:active {
+	@apply border-2 border-green-200 bg-black;
+}
+
+html,
+body {
+	@apply bg-black;
+}
