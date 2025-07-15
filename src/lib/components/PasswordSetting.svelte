@@ -132,9 +132,9 @@
 	</div>
 
 	<div
-		class="bg-grey-850 mb-4 flex items-center justify-between px-4 {strong().label
-			? 'py-3 md:py-5'
-			: 'py-3.5 md:py-5.5'} md:mb-8 md:px-8"
+		class="bg-grey-850 mb-4 flex items-center justify-between px-4 py-3.5 {strong().label
+			? ' md:py-5'
+			: 'md:py-5.5'} md:mb-8 md:px-8"
 	>
 		<span class="text-grey-600 uppercase">strength</span>
 		<div class="flex items-center gap-2">
